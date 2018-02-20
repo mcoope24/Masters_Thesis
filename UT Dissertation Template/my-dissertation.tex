@@ -22,7 +22,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TO DO: FILL IN YOUR INFORMATION BELOW - READ THIS SECTION CAREFULLY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Emperical Modeling and Implementation of Hybrid K-Edge Densitometry for Pyroprocessing Applications}	       	% title of thesis/dissertation
+\title{Semi-Empirical Modeling and Implementation of Hybrid K-Edge Densitometry for Pyroprocessing Applications}	       	% title of thesis/dissertation
 \author{Michael P. Cooper}                			% author's name
 \copyrightYear{2018}            				% copyright year of your thesis/dissertation
 \graduationMonth{May}           				% month of graduation for your thesis/dissertation
@@ -47,12 +47,19 @@
 \usepackage{mathrsfs}                   % additional math scripts
 \usepackage[titletoc]{appendix}			% format appendix correctly
 \usepackage{pdflscape}					% to produce landscape pages if necessary
+\usepackage{todonotes}
 \usepackage{listings}
 \lstset{
 basicstyle=\small\ttfamily,
 columns=flexible,
 breaklines=true
 }
+
+% Style for quote blocks
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\singlespace\vspace{-\topsep}\small}
+\AtEndEnvironment{quote}{\vspace{-\topsep}\endsinglespace}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This section formats landscape pages properly with the correct page number.
 % This code is only necessary when landscape pages are needed and can be left alone
@@ -114,7 +121,7 @@ breaklines=true
     \include{front-matter}
 
     \include{front-matter/nomenclature}
-    \include{chapters/chapter-1}
+    %\include{chapters/chapter-1}
     \include{chapters/chapter-2}
     \include{chapters/chapter-3}
     \include{chapters/chapter-4}
@@ -128,7 +135,8 @@ breaklines=true
 % bibliography style - recommend using apalike-doi as it hyperlinks DOIs
 % Be sure to run BibTeX in order to generate the bibliography correctly.
 
-\utbiblio{#1}{apalike}{references-dissertation}
+%\utbiblio{#1}{apalike}{references-dissertation}
+\utbiblio{#1}{IEEEtran}{references-dissertation}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % APPENDIX - OPTIONAL - COMMENT OUT IF NOT NEEDED
